@@ -1,0 +1,76 @@
+.observed{
+    background-color: aqua;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    bottom: 200px;
+    left: 200px;
+}
+
+.InfiniteScrollGrid{
+    min-height: 100vh;
+    background-color: rgba(60, 60, 66, 0.7);
+    margin-bottom: 50px;
+
+}
+.InfiniteScrollGrid > ul{
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(5, minmax(50px, 300px));
+
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    padding: 2px;
+}
+
+
+.griditem{
+    background-size: cover;
+    background-position: center;
+    margin: 4px;
+    box-sizing: border-box;
+    background-color:  #CCC;
+}
+.griditem > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.griditem.i1x1{
+    grid-area: span 1/ span 1;
+}
+
+.griditem.i1x2{
+    grid-area: span 2/ span 1;
+}
+
+.griditem.i1x3{
+    grid-area: span 3/ span 1;
+}
+
+.griditem.i2x1{
+    grid-area: span 1/ span 2;
+}
+
+.griditem.i2x2{
+    grid-area: span 2/ span 2;
+}
+
+.griditem.i2x3{
+    grid-area: span 3/ span 2;
+}
+
+.griditem.i3x1{
+    grid-area: span 1/ span 3;
+}
+
+.griditem.i3x2{
+    grid-area: span 2/ span 3;
+}
+
+.griditem.i3x3{
+    grid-area: span 3/ span 3;
+}

@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+    color: rgba(230,230,240,0.99);
+}
+#wipContainer{
+    background-color: rgba(50, 50, 55,0.8);
+    width: 85vw;
+    height: 70vh;
+    border-radius: 0.25rem;
+    display: flex;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    flex-direction: column;
+    min-height: 150px;
+    margin-bottom: 5rem;
+}
+#wipContainer > h3{
+    font-size: 1.4rem;
+}
+
+#wipRoadmap{
+    padding: 2rem;
+    border-radius: 0.25rem;
+    background-color: rgba(60, 60, 66,1);
+    width: 100%;
+    height: 300px;
+    list-style: none;
+    display: flex;
+    justify-content: start;
+}
+
+.wipRoadmapItem{
+    background-color: rgba(60, 60, 66,1);
+    position: relative;
+    height: 100%;
+    float: left;
+    padding:2rem;
+    border: 1px solid white;
+    border-radius: 12px;
+    margin-right: 2rem;
+    z-index: 3;
+}
+.wipRoadmapItem::after{
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    display: block;
+z-index: 1;
+    width: 36px;
+    height: 8px;
+    background-color: white;
+}
+
+.wipRoadmapItem > img{
+    min-width: 80px;
+    min-height: 80px;
+    height: 100%;
+    width: 100%;
+    object-fit:contain;
+    object-position: center;
+    display: block;
+
+}
+
+.RoadmapCollapse{
+    width: 50%;
+}
+@media screen and (max-width: 768px){
+    #wipContainer{
+        height: 100%;
+        width: 90vw;
+    }
+    #wipRoadmap{
+        background: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        gap: 24px;
+        overflow: hidden;
+    }
+
+    .wipRoadmapItem{
+        background-color: rgba(60, 60, 66,1);
+        flex: 1;
+        padding: 1rem;
+        height: 100px;
+        width: 120px;
+        min-width: 80px;
+        position: relative;
+    }
+    .wipRoadmapItem::after{
+        position: absolute;
+        height: 24px;
+        width: 8px;
+        left: 50%;
+        top: 100%;
+    }
+    .wipRoadmapItem > img{
+        min-width: 50px;
+    }
+}

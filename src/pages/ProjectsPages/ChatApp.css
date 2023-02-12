@@ -1,0 +1,56 @@
+.chatContainer{
+    padding-bottom: 0.5rem;
+    width: 55vw;
+    height: 60vh;
+    background-color: rgba(80, 80, 85, 1);
+    border: 2px solid rgb(44, 134, 83);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border-radius: 2px;
+}
+
+.chatContainer > *{
+    border-radius: 4px;
+    background-color: rgba(60, 60, 65, 0.9);
+}
+
+.chatContainer > button{
+margin: 0.25em 1em;
+}
+
+#usernameInput{
+    margin: 1em;
+}
+.messagesContainer{
+    flex: 1;
+    margin: 1em;
+background-color: rgb(95, 95, 100);
+display: flex;
+flex-direction: column-reverse;
+overflow: auto;
+}
+
+.messagesContainer > ul{
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 4px;
+}
+
+.messageField{
+    outline: none;
+    border: 2px solid rgba(60, 60, 65, 0.9);
+    margin: 0 1em 1em 1em;
+    height: 10%;
+}
+
+.message{
+    border: 1px solid rgb(160,160,165);
+    margin: 0;
+    padding: 0;
+
+}

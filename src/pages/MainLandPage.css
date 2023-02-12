@@ -1,0 +1,162 @@
+
+.MainLandPage{
+    margin: 0;
+    padding: 0;
+}
+.MainLandPage.container{
+    text-align: left;
+    width: 100vw;
+    height: 100vh;
+}
+.MainLandPage.headers{
+    opacity: 0;
+    position: relative;
+    top: 10%;
+    left: 15%;
+    animation: landingOpac 1.6s ease ;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    display: inline-block;
+}
+.MainLandPage.name{
+    display: inline-block;
+}
+
+.MainLandPage.animationContainer{
+    position:  relative;
+    left: 50%;
+    top: 10px;
+    width: 300px;
+    height: 300px;
+
+}
+.animationitem{
+    height: 2px;
+    border: 2px solid black;
+    width: 0;
+    opacity: 0;
+    border-radius: 2px;
+    animation-delay: 2s;
+
+}
+.animationitem.cls1{
+    position: absolute;
+    inset: 153px 254px;
+    transform: rotate(208deg);
+    transform-origin: left;
+    animation: draw1 2.5S linear ;
+    animation-fill-mode: forwards;
+}
+.animationitem.cls2{
+    position: absolute;
+
+    inset: 200px 166px;
+    transform: rotate(-28deg);
+    transform-origin: left;
+    animation: draw3 2.5S linear;
+    animation-fill-mode: forwards;
+}
+.animationitem.cls3{
+    position: absolute;
+    inset: 220px 133px;
+    transform: rotate(-78deg);
+    transform-origin: left;
+    animation: draw2 2.5S linear;
+    animation-fill-mode: forwards;
+}
+.animationitem.cls4{
+    position: absolute;
+    inset: 153px 40px;
+    transform: rotate(28deg);
+    transform-origin: left;
+    animation: draw1 2.5S linear;
+    animation-fill-mode: forwards;
+}
+.animationitem.cls5{
+    position: absolute;
+    inset: 106px 128px;
+    transform: rotate(152deg);
+    transform-origin: left;
+    animation: draw3 2.5S linear ;
+    animation-fill-mode: forwards;
+}
+
+@keyframes draw1{
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    20%{
+        opacity: 0.8;
+        width: 20px;
+    }
+    to {
+        opacity: 0.99;
+        width: 100px;
+    }
+}
+@keyframes draw3{
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        opacity: 0.99;
+        width: 100px;
+    }
+}
+@keyframes draw2{
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        opacity: 0.99;
+        width: 135px;
+    }
+}
+
+@keyframes landingOpac{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 0.99  ;
+    }
+}
+
+
+
+
+
+.MainLandPage.techContainer{
+    background-color: rgba(50, 50, 55,0.6);
+    max-height: 30%;
+    max-width: 20%;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 35vh auto;
+    padding: 2rem;
+    border-radius: 0.5rem;
+
+
+}
+
+.techIcon {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.techIcon.svelte{
+    width: 76%;
+}
+
+@media screen and (max-width: 768px){
+    .MainLandPage.animationContainer{
+        left: 5%;
+        scale: 0.8;
+    }
+
+}

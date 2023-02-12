@@ -1,0 +1,40 @@
+.ProjectsLand.mainCard{
+    display: flex;
+    background-color: rgba(60, 60, 66, 0.9);
+    width: 70vw;
+    height: 40vh;
+    border-radius: 4px;
+    padding: 2vw;
+
+}
+
+.ProjectsLand.list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 2vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.items{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #FFFFFF;
+    background-color: #787878;
+}
+
+@media screen and (max-width: 768px){
+    .ProjectsLand.list{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3vw;
+        padding: 1vw;
+    }
+    
+}

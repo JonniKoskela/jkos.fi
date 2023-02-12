@@ -1,0 +1,130 @@
+#Preloader{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(16,16,24);
+}
+
+.Preloader.animationContainer{
+        position:  relative;
+        bottom: 10%;
+        width: 300px;
+        height: 300px;
+    
+    }
+    .Preloader.animationitem{
+        height: 2px;
+        border: 2px solid rgb(240,240,240);
+        width: 0;
+        opacity: 0;
+        border-radius: 2px;
+        animation-delay: 2s;
+    
+    }
+    .Preloader.animationitem.cls1{
+        position: absolute;
+
+        transform: rotate(208deg);
+        transform-origin: left;
+        animation: PLdraw1 2s linear ;
+        animation-iteration-count: infinite;
+    }
+    .Preloader.animationitem.cls2{
+        position: absolute;
+    
+
+        transform: rotate(-28deg);
+        transform-origin: left;
+        animation: PLdraw3 2s linear;
+        animation-iteration-count: infinite;
+    }
+    .Preloader.animationitem.cls3{
+        position: absolute;
+        inset: 220px 133px;
+        transform: rotate(-78deg);
+        transform-origin: left;
+        animation: PLdraw2 2s linear;
+        animation-iteration-count: infinite;
+    }
+    .Preloader.animationitem.cls4{
+        position: absolute;
+        inset: 153px 40px;
+        transform: rotate(28deg);
+        transform-origin: left;
+        animation: PLdraw1 2s linear;
+        animation-iteration-count: infinite;
+    }
+    .Preloader.animationitem.cls5{
+        position: absolute;
+        inset: 106px 128px;
+        transform: rotate(152deg);
+        transform-origin: left;
+        animation: PLdraw3 2s linear ;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes PLdraw1{
+        0% {
+            width: 0;
+            opacity: 0;
+        }
+        20%{
+            opacity: 0.8;
+            width: 20px;
+        }
+        70% {
+            opacity: 0.99;
+            width: 100px;
+        }
+        100%{
+                opacity: 0;
+                width: 100px;
+
+        }
+    }
+    @keyframes PLdraw3{
+        0% {
+            width: 0;
+            opacity: 0;
+        }
+        70% {
+            opacity: 0.99;
+            width: 100px;
+        }
+        100%{
+                opacity: 0;
+                width: 100px;
+
+        }
+    }
+    @keyframes PLdraw2{
+        0% {
+            width: 0;
+            opacity: 0;
+        }
+        70% {
+            opacity: 0.99;
+            width: 135px;
+        }
+        100%{
+                opacity: 0;
+                width: 135px;
+
+        }
+    }
+    
+    @keyframes PLlandingOpac{
+        from{
+            opacity: 0;
+        }
+        70%{
+            opacity: 0.99  ;
+        }
+        100%{
+                opacity: 0;
+
+        }
+    }
+    
